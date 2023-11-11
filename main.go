@@ -18,17 +18,16 @@ func main() {
 		firstName: "Bernardo",
 		lastName:  "Camargo",
 		contactInfo: contactInfo{
-			email: "bernardopcamargo@gmail.com",
-			cep:   18035590,
+			email: "personalemail@gmail.com",
+			cep:   18342444,
 		},
 	}
-	pointerToBernardo := &bernardo
-	pointerToBernardo.updateName("berna")
+	bernardo.updateName("Ber")
 	bernardo.print()
 }
 
 func (p *person) updateName(newFirstName string) {
-	(*p).firstName = newFirstName
+	p.firstName = newFirstName
 }
 
 func (p *person) print() {
