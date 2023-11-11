@@ -22,9 +22,14 @@ func main() {
 			cep:   18035590,
 		},
 	}
+	bernardo.updateName("berna")
 	bernardo.print()
 }
 
-func (p person) print() {
+func (p person) updateName(newFirstName string) {
+	p.firstName = newFirstName
+}
+
+func (p *person) print() {
 	fmt.Printf("%+v", p)
 }
